@@ -217,9 +217,8 @@
                 </div>
 
               <!-- Management Team section  -->
-                <div class="card border-0 shadow-sm mb-4">
-
-                    <div class="card-body">
+                <div class="card border-0 shadow-sm mb-4">  
+                     <div class="card-body">
                         <div class="d-flex allign-items-center justify-content-between mb-3">
                         <h5 class="card-title m-0">Management Team</h5>
                         <button type="button" class="btn btn-dark shadow-none btn-sm" data-bs-toggle="modal" data-bs-target="#team-s">
@@ -227,8 +226,10 @@
                         </button>
                         </div>
                         <div class="row" id="team-data">
-                </div>
+                        </div>
 
+                    </div>
+                </div>
 
               <!--Management Team modal  -->
 
@@ -257,10 +258,12 @@
                             </form>
                             </div> 
                  </div>
-             </div>
+                </div>
+
 
         </div>
     </div>
+</div>
 
     <?php require('inc/scripts.php'); ?>
   <script src="scripts/settings.js"></script>

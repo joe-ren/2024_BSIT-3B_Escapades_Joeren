@@ -79,7 +79,7 @@ if(isset($_POST['add_member']))
 
 if(isset($_POST['get_members']))
 {
-  $res = selectALl('team_details');
+  $res = selectAll('team_details');
 
   while($row = mysqli_fetch_assoc($res))
   {

@@ -1,5 +1,5 @@
 <div class="container-fluid bg-dark text-light p-3 d-flex align-items-center justify-content-between sticky-top">
-    <h3 class="mb-0">ADMIN PANEL</h3>
+    <h3 class="mb-0">ESCAPADES</h3>
     <a href="logout.php" class="btn btn-light btn-sm">LOG OUT</a>
 </div>
 
@@ -14,6 +14,9 @@
         <ul class="nav nav-pills flex-column">
             <li class="nav-item">
                 <a class="nav-link text-white" href="dashboard.php">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="features_facilities.php"> Features & Facilities</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white" href="user_queries.php">User Queries</a>

@@ -5,13 +5,16 @@
     define('SITE_URL','http://127.0.0.1/escapades/');
     define('ABOUT_IMG_PATH',SITE_URL.'images/about/');
     define('CAROUSEL_IMG_PATH',SITE_URL.'images/carousel/');
+    define('FACILITIES_IMG_PATH',SITE_URL.'images/facilities/');
+    
+    
     //backend upload process needs this data
-
 
     define('UPLOAD_IMAGE_PATH',$_SERVER['DOCUMENT_ROOT'].'/escapades/images/');
     define('ABOUT_FOLDER','about/');
     define('CAROUSEL_FOLDER','carousel/');
-
+    define('FACILITIES_FOLDER','facilities/');
+    
 
     function adminLogin(){
         session_start();
@@ -56,7 +59,7 @@
         }
         else{
             $ext = pathinfo($image['name'],PATHINFO_EXTENSION);
-            $rname = 'IMG_'.random_int(11111,99999).".$ext";
+            $rname = 'IMG'.random_int(11111,99999).".$ext";
 
             $img_path = UPLOAD_IMAGE_PATH.$folder.$rname;
             if(move_uploaded_file($image['tmp_name'],$img_path)){
@@ -75,6 +78,32 @@
         }
         else{
             return false;
+        }
+    }
+
+
+    function uploadSVGImage($image,$folder)
+    {
+        $valid_mime = ['image/svg+xml'];
+        $img_mime = $image['type'];
+
+        if(!in_array($img_mime,$valid_mime)){
+            return 'inv_img';  //invalid image mime or format
+        }
+        else if(($image['size']/(1024*1024))>1){
+            return 'inv_size'; //invalid size greater than 1mb
+        }
+        else{
+            $ext = pathinfo($image['name'],PATHINFO_EXTENSION);
+            $rname = 'IMG_'.random_int(11111,99999).".$ext";
+
+            $img_path = UPLOAD_IMAGE_PATH.$folder.$rname;
+            if(move_uploaded_file($image['tmp_name'],$img_path)){
+                return $rname;
+            }
+            else{
+                return 'upd_failed';
+            }
         }
     }
 
