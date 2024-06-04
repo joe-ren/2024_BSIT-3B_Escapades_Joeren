@@ -163,26 +163,27 @@
             <label class="form-label" style="font-weight: 500;">Check-out</label>
             <input type="date" class="form-control shadow-none">
           </div>
-          <div class="col-lg-3 mb-2">
-          <label class="form-label" style="font-weight: 500;">Adult</label>
-          <select class="form-select shadow-none">
-            <option selected>Open this select menu</option>
+          <div class="col-lg-2 mb-2">
+          <label class="form-label" style="font-weight: 500;">Destination</label>
+          <input name="name" required type="text" class="form-control shadow-none">
+            <!-- <option selected>Open this select menu</option>
             <option value="1">One</option>
             <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option value="3">Three</option> -->
           </select>
           </div>
           <div class="col-lg-2 mb-2">
-          <label class="form-label" style="font-weight: 500;">Children</label>
-          <select class="form-select shadow-none">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
+          <label class="form-label" style="font-weight: 500;">Travelers</label>
+          <input name="name" required type="text" class="form-control shadow-none">
+            <!-- <option selected>Open this select menu</option> -->
+            <!-- <option value="1">One</option>
             <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option value="3">Three</option> -->
           </select>
           </div>
-          <div class="col-lg-1 mb-lg-2 mt-2">
-            <button type="submit" class="btn text-white shadow-none custom-bg">Submit</button>
+          <div class="col-lg-2 mb-2">
+          <!-- <input type="text" class="form-control shadow-none" style="font-weight: 500;" placeholder="Search"> -->
+          <a href="rooms.php" class="btn btb-sm btn-outline-dark rounded-0 fw-bold shadow-none">Search</a>
           </div>
         </div>
       </form>
@@ -356,7 +357,7 @@
     </div>
 
     <div class="col-lg-12 text-center mt-5">
-      <a href="#" class="btn btb-sm btn-outline-dark rounded-0 fw-bold shadow-none">More Rooms</a>
+      <a href="rooms.php" class="btn btb-sm btn-outline-dark rounded-0 fw-bold shadow-none">More Rooms</a>
     </div>
   </div>
 </div>
@@ -388,7 +389,7 @@
       <h5 class="mt-3">Entertainment</h5>
     </div>
     <div class="col-lg-12 text-center mt-5">
-      <a href="#" class="btn btb-sm btn-outline-dark rounded-0 fw-bold shadow-none">More Facilities</a>
+      <a href="facilities.php" class="btn btb-sm btn-outline-dark rounded-0 fw-bold shadow-none">More Facilities</a>
     </div>
   </div>
 </div>
