@@ -17,7 +17,7 @@
 
     <div class="container-fluid" id="main-content">
         <div class="row">
-            <div class="col-lg-10 ms-auto p-4 overflow-hidden">
+            <div class="col-lg-10 ms-auto p-4">
                <h3 class="mb-4">ROOMS</h3>
 
                 <!-- feature -->
@@ -154,6 +154,7 @@
         add_room_form.addEventListener('submit',function(e){
             e.preventDefault();
             add_rooms();
+            get_all_rooms();
         });
 
         function add_rooms()
@@ -213,7 +214,6 @@
             let xhr = new XMLHttpRequest();
                 xhr.open("POST","ajax/rooms.php",true);
                 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
 
                 xhr.onload = function(){
                 document.getElementById('room-data').innerHTML = this.responseText;
